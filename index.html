@@ -3,18 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Website</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>AI Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Flask Website!</h1>
+        <div class="container">
+            <h1>VISHNU P P</h1>
+            <p>Hi, I'm an experienced AI Engineer passionate about building impactful solutions for businesses and society.</p>
+        </div>
     </header>
-    <main>
-        <p>This is a simple Flask application hosted on GitHub!</p>
+
+    <main class="container">
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="project-category">
+                <h3>Machine Learning & AI</h3>
+                <div class="scrolling-banner">
+                    <div class="scroll-indicator">&#8595;</div>
+                    <div class="project-item" onclick="openModal('recommendationSystem')">
+                        <h4>Recommendation System</h4>
+                        <p>Developed a robust recommendation system for e-commerce platforms to enhance user experience.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('customerChurn')">
+                        <h4>Customer Churn Modelling</h4>
+                        <p>Built predictive models to identify and mitigate customer churn using advanced analytics.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('dynamicPricing')">
+                        <h4>Dynamic Pricing</h4>
+                        <p>Implemented dynamic pricing models to optimize product prices based on market demand and trends.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('customerGrouping')">
+                        <h4>Customer Grouping</h4>
+                        <p>Used clustering techniques to segment customers based on purchasing behavior.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('toxicWordClassification')">
+                        <h4>Toxic Word Classification (using Transformer model)</h4>
+                        <p>Built a model to detect toxic words in user feedback using transformer architecture.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('sqlQueryAutomation')">
+                        <h4>SQL Query Automation (using LLM and Google PaLM)</h4>
+                        <p>Automated SQL query generation using large language models and Google PaLM for context-based search.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('customerServiceChatbot')">
+                        <h4>Customer Service Chatbot (using LLM)</h4>
+                        <p>Developed an AI-powered chatbot for automating customer service queries using LLMs.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('rasaChatbot')">
+                        <h4>Rasa Chatbot</h4>
+                        <p>Built a conversational AI chatbot for customer interaction using Rasa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-category">
+                <h3>Security & Fraud Detection</h3>
+                <div class="scrolling-banner">
+                    <div class="scroll-indicator">&#8595;</div>
+                    <div class="project-item" onclick="openModal('ipBlocking')">
+                        <h4>IP Blocking with CAPTCHA</h4>
+                        <p>Developed a security mechanism in Django to prevent unauthorized access using IP blocking and CAPTCHA.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('fileUploadSecurity')">
+                        <h4>File Upload Security Detection</h4>
+                        <p>Implemented a threat detection system for uploaded files to prevent malicious activities.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('fraudDetection')">
+                        <h4>Fraud Detection Engine</h4>
+                        <p>Built a fraud detection system using machine learning to identify fraudulent transactions in real-time.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('anomalyDetection')">
+                        <h4>Anomaly Detection</h4>
+                        <p>Implemented anomaly detection models for identifying unusual patterns in financial transactions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-category">
+                <h3>Image Processing</h3>
+                <div class="scrolling-banner">
+                    <div class="scroll-indicator">&#8595;</div>
+                    <div class="project-item" onclick="openModal('imageSearch')">
+                        <h4>Image Search</h4>
+                        <p>Implemented an image search system using deep learning and transfer learning techniques.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('groceriesFreshness')">
+                        <h4>Groceries Freshness Classification</h4>
+                        <p>Developed a model to classify the freshness of groceries based on images.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('floorCleanChecking')">
+                        <h4>Floor Clean Checking</h4>
+                        <p>Created an image classification model to check floor cleanliness.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('imageGeneration')">
+                        <h4>Image Generation (using OpenAI and Pollination in Flask)</h4>
+                        <p>Used OpenAI's DALL·E and Pollination API to generate images in Flask applications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-category">
+                <h3>Backend Development & Search Optimization</h3>
+                <div class="scrolling-banner">
+                    <div class="scroll-indicator">&#8595;</div>
+                    <div class="project-item" onclick="openModal('elasticSearch')">
+                        <h4>Elastic Search with Django</h4>
+                        <p>Implemented full-text search optimization in Django applications using Elasticsearch.</p>
+                    </div>
+                    <div class="project-item" onclick="openModal('sidraInfinity')">
+                        <h4>Backend Development of Sidra Infinity App</h4>
+                        <p>Developed the backend of Sidra Infinity, an e-commerce platform, optimizing the performance and scalability.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2025 My Flask Website</p>
+        <div class="container">
+            <p>&copy; 2025 AI Engineer Portfolio | Designed by [Your Name]</p>
+        </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
