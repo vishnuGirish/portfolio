@@ -26,7 +26,24 @@ function openModal(projectId) {
         toxicWordClassification: {
             title: 'Toxic Word Classification (using Transformer model)',
             description: 'Built a model to detect toxic words in user feedback using transformer architecture.',
-            details: 'This project used a fine-tuned BERT model to detect harmful or abusive language in customer reviews.'
+            details: `
+                <p>
+                    This project involves creating a text classification pipeline using a pre-trained BERT-based model (unitary/toxic-bert), specifically designed to identify toxic or harmful language in text. The classifier uses the TensorFlow framework to assess whether a given piece of text is considered toxic or not, based on a predefined threshold score. If the score is below the threshold (0.02), the text is classified as "Not Toxic," and if it exceeds the threshold, it is classified as "Toxic." The functionality is encapsulated in the is_toxic function, making it easy to integrate into various applications that need to analyze the sentiment or appropriateness of textual content.
+                </p>
+                <p>
+                    How This Project Can Be Useful in E-commerce:
+                    <ul>
+                        <li>Customer Reviews Moderation: Automatically flag and filter out harmful reviews to ensure constructive and positive feedback is displayed.</li>
+                        <li>User-Generated Content (UGC) Protection: Detect and flag harmful comments to maintain a safe and respectful environment.</li>
+                        <li>Chatbot and Customer Support Conversations: Detect toxic language in real-time to address issues promptly or escalate conversations as needed.</li>
+                    </ul>
+                </p>
+                <div style="display: flex; overflow-x: auto;">
+                    <img src="images/toxic_word/toxic_word1.png" alt="Demo Image 1" style="width: 100%; margin: 10px; max-width: 300px;">
+                    <img src="images/toxic_word/toxicword2.png" alt="Demo Image 2" style="width: 100%; margin: 10px; max-width: 300px;">
+                    <img src="images/toxic_word/toxicword3.png" alt="Demo Image 3" style="width: 100%; margin: 10px; max-width: 300px;">
+                </div>
+            `
         },
         sqlQueryAutomation: {
             title: 'SQL Query Automation (using LLM and Google PaLM)',
