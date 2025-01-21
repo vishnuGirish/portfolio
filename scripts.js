@@ -82,8 +82,8 @@ function openModal(projectId) {
         },
         imageSearch: {
             title: 'Image Search',
-            description: 'Implemented an image search system using deep learning and transfer learning techniques.',
-            details: 'Used pre-trained CNN models to extract features from images for search-based recommendations.'
+            description: 'Implemented an image search system using the Deep Image Search library.',
+            details: 'Utilized the Deep Image Search library to extract features from images for search-based recommendations.'
         },
         groceriesFreshness: {
             title: 'Groceries Freshness Classification',
